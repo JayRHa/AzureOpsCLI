@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "azure-ops-cli"
+version = "0.1.0"
+description = "Agent-friendly Azure operations evidence for resources, deployments, activity logs and health."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Jannik Reinhard", email = "contact@jannikreinhard.com"}]
+keywords = ["azure", "app-service", "operations", "cli", "automation"]
+dependencies = []
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: System :: Systems Administration",
+]
+
+[project.urls]
+Homepage = "https://github.com/JayRHa/AzureOpsCLI"
+Repository = "https://github.com/JayRHa/AzureOpsCLI"
+Issues = "https://github.com/JayRHa/AzureOpsCLI/issues"
+
+[project.scripts]
+azure-ops = "azure_ops_cli.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
